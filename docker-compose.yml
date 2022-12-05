@@ -4,8 +4,5 @@ services:
     build: .
     env_file:
       - .env
-    # Just for developing without redeploying the image
-    # volumes: 
-    #  - ./sources:/app
     ports:
       - 8000:80
