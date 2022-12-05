@@ -3,14 +3,19 @@
     "description": "A simple web application for accessing a bank account",
     "type": "project",
     "license": "MIT",
-    "autoload": {},
+    "autoload": {
+        "psr-4": {
+            "FinTSInfo\\": "app/classes/"
+        }
+    },
     "authors": [
         {
             "name": "Dennis Heinrich"
         }
     ],
     "require": {
-        "nemiah/php-fints": "^3.3",
-        "vlucas/phpdotenv": "^5.5"
+        "vlucas/phpdotenv": "^5.5",
+        "twig/twig": "^3.0",
+        "mschindler83/fints-hbci-php": "^1.0"
     }
 }
