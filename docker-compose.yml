@@ -1,9 +1,12 @@
 version: '3'
 services:
   webfiles:
-    image: webdevops/php-apache:8.0
+    image: webdevops/php-apache:8.1
+    # You can choose between these both options:
+    # image: webdevops/php-apache:8.1
+    # build: ./webfiles
     environment:
-      - WEB_DOCUMENT_ROOT=/app/public
+      - WEB_DOCUMENT_ROOT=/app/sources/public
     volumes:
       - ./webfiles:/app
     ports:

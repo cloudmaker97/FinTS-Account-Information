@@ -10,6 +10,7 @@
         }
     ],
     "require": {
-        "nemiah/php-fints": "^3.3"
+        "nemiah/php-fints": "^3.3",
+        "vlucas/phpdotenv": "^5.5"
     }
 }
