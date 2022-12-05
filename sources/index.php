@@ -29,12 +29,16 @@ $twig = new \Twig\Environment($loader, [
 session_set_cookie_params(strtotime('+1 minutes', 0));
 session_start();
 if (!isset($_SESSION["accountDetails"])) {
-    $accountDetails = new \FinTSInfo\AccountDetails();
+    try {
+        $accountDetails = new \FinTSInfo\AccountDetails();
+    } catch(Exception $exception) {
+        echo $exception->getMessage();
+        die;
+    }
     $_SESSION["accountDetails"] = $accountDetails;
 } else {
     $accountDetails = $_SESSION["accountDetails"];
 }
-
 // Render the page
 echo $twig->render("index.html.twig", [
     "application" => [
