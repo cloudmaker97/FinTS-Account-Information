@@ -9,11 +9,34 @@ It's easy to configure and deploy it via. Docker
 
 ## Starting the project
 
-1. Copy the `.env.example` to `.env` and modify it for your needs (see the chapter below)
-2. Check the `docker-compose.yml` file, if neccesary change the port
-3. Run `docker compose up -d --build` in the project directory
-4. Access it via `http://localhost:8000` and watch your money flow!
-    1. (Optional) Configure a reverse proxy to e.g. limit the access for specific users
+1. Creating and modify the files (in the code blocks below) to your needs
+2. Type `docker compose up -d` in your console
+3. Access the website on this url: `http://localhost:8000`
+
+File: `docker-compose.yml`
+
+```yaml
+version: '3'
+services:
+  webfiles:
+    image: ghcr.io/cloudmaker97/docker-bank-account:main
+    env_file:
+      - .env
+    ports:
+      - 8000:80
+```
+
+File: `.env` - Variables are described in the chapter below
+
+```txt
+APPLICATION_NAME=My FinTS Account
+APPLICATION_MODE=prod
+FINTS_URL="https://fints.example.com"
+FINTS_PORT=443
+FINTS_BANK="1234567"
+FINTS_ACCOUNT="1234567"
+FINTS_PASSWORD="changeme"
+```
 
 ## Environment Variables
 
