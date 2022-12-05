@@ -1,0 +1,15 @@
+{
+    "name": "cloudmaker97/fints-account-info",
+    "description": "A simple web application for accessing a bank account",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {},
+    "authors": [
+        {
+            "name": "Dennis Heinrich"
+        }
+    ],
+    "require": {
+        "nemiah/php-fints": "^3.3"
+    }
+}

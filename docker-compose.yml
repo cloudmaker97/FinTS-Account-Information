@@ -1,0 +1,10 @@
+version: '3'
+services:
+  webfiles:
+    image: webdevops/php-apache:8.0
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/public
+    volumes:
+      - ./webfiles:/app
+    ports:
+      - 8000:80
