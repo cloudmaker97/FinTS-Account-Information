@@ -1,4 +1,4 @@
-# FinTS Account Information
+# FinTS Account Information 
 
 This project is used to show bank account informations, like:
 
